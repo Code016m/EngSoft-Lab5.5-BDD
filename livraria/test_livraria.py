@@ -1,11 +1,11 @@
 import unittest
 
-from livraria import pesquisar_livro
+from livraria import pesquisar_livros
 
 class TestLivraria(unittest.TestCase):
 
     def test_usuario_pesquisa_um_livro(self):
-        resultado = pesquisar_livro("Dom Casmurro")
+        resultado = pesquisar_livros("Dom Casmurro")
         self.assertEqual(len(resultado), 1)
         self.assertEqual(resultado[0]["titulo"], "Dom Casmurro")
 
