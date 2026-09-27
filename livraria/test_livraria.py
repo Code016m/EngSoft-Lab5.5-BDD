@@ -16,5 +16,10 @@ class TestLivraria(unittest.TestCase):
         self.assertEqual(livro["autor"], "Machado de Assis")
         self.assertEqual(livro["preco"], 30.0)
 
+    def test_usuario_consulta_disponibilidade(self):
+        resultado = pesquisar_livros("Dom Casmurro")
+        livro = resultado[0]
+        self.assertTrue(livro["disponivel"])
+
 if __name__ == "__main__":
     unittest.main()
