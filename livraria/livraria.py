@@ -1,12 +1,16 @@
 def pesquisar_livros(termo):
-    livros = listar_livros()
+    livros = lista_livros()
+
     resultado = []
+
     for livro in livros:
         if termo.lower() in livro["titulo"].lower():
             resultado.append(livro)
+
     return resultado
 
-def listar_livros():
+
+def lista_livros():
     return [
         {
             "titulo": "Dom Casmurro",
