@@ -21,5 +21,10 @@ class TestLivraria(unittest.TestCase):
         livro = resultado[0]
         self.assertTrue(livro["disponivel"])
 
+    def test_livro_indisponivel(self):
+        resultado = pesquisar_livros("O Cortiço")
+        livro = resultado[0]
+        self.assertFalse(livro["disponivel"])
+
 if __name__ == "__main__":
     unittest.main()
